@@ -1,0 +1,16 @@
+Problem 5:
+write a code  will take  input as your name and greet you with
+good morning , good evening , goodafter noon , good night as per the current time your system :
+solution- 
+import datetime
+currentTime=datetime.datetime.now()
+currentTime.hour
+if currentTime.hour< 12:
+     print('good morning.')
+elif 12<= currentTime.hour < 18:
+     print('good afternoon.')
+else:
+     print('good evening.')
+
+
+   
