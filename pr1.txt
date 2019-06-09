@@ -1,7 +1,7 @@
 problem 1:
  Create a program that asks the user to enter their name and their age.
  Print out a message that will tell them the year that they will turn 95 years old.
-solution-  from datetime import datetime
+solution-         from datetime import datetime
                   name=input("enter the name") 
                   age=int(input("enter the age"))
                   hundred = int((100-age) + datetime.now().year)
