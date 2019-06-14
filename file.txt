@@ -1,0 +1,25 @@
+choice=int(input("enter your choice: \n 1. cat \t2. cat  -b\t3.cat -n\4. cat -E\n:"))
+
+if choice==1:
+   f=open("file.txt","r")
+    print(f.read())
+    
+elif choice==2:
+  for line in f:
+    print(line.strip()+"$")
+
+elif choice==3:
+ count=1
+  for line in f:
+    print(str(count)+line.strip())
+    count+=1
+
+elif choice==4:
+ i=5
+  for line in f:
+    if line.strip()!="":
+        print(str(i)+"."+line.strip())
+        i+=1
+
+else:
+  print("enter wrong choice")
