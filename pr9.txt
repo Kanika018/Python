@@ -1,0 +1,37 @@
+#!/usr/bin/python3
+
+from collections import Counter
+
+char = input('Enter some text: ')
+if len(char) > 500:
+	char = char[0:500]
+
+text_dict = dict(Counter(char))
+print('No of repeated characters: ')
+for i in sorted(text_dict,key=text_dict.get,reverse=True):
+	print(i,text_dict[i])
+
+word_dict = {}
+word_text = char.split()
+for i in word_text:
+	if i in word_dict:
+		word_dict[i] = word_dict[i] + 1
+	else:
+		word_dict[i] = 1
+for i in sorted(word_dict,key=word_dict.get,reverse=True):
+	print(i,word_dict[i])
+
+for i in word_dict.keys():
+	if word_dict[i] >5:
+		texts = char.split()
+		for j in range(word_dict[i]):
+			char.remove(i)
+		print(char)
+	if word_dict[i] == 1:
+		length = len(i)
+		if len(char)+length > 500:
+			char = char[0:500-length]
+			char = char + ' ' + i
+		else:
+			char = char + ' ' + i
+	print(char)
